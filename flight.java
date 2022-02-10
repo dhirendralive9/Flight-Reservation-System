@@ -1,20 +1,28 @@
 class Flight {
     private int flightNumber;
-    private int flightCapacity;
+    private int flightCapacity =200;
     private int seatBooked;
     private String airLine;
     private String flightName;
+    private int seatAvialable = 200;
 
-     Flight(int flightNumber,int flightCapacity,int seatBooked,String airLine,String flightName){
+     Flight(int flightNumber,String airLine,String flightName){
         this.flightNumber = flightNumber;
-        this.flightCapacity = flightCapacity;
-        this.seatBooked = seatBooked;
+        
         this.airLine = airLine;
         this.flightName = flightName;
     }
 
     public void seatBook(int numberOfSeats){
-        seatBooked = seatBooked-numberOfSeats;
+        this.seatBooked = this.seatBooked+numberOfSeats;
+        this.seatAvialable = this.flightCapacity-this.seatBooked;
+    }
+    public int seatAvialable(){
+      return this.seatAvialable;
+    }
+
+    public int getFlightCapacity(){
+        return this.flightCapacity;
     }
 
     public void flightUpdate(){

@@ -1,10 +1,10 @@
-class Contact extends Address{
+class Contact {
     private String name;
     private String emailId;
     private long phoneNumber;
 
-    public Contact(String name,String emailId,long phoneNumber,String address){
-        super(address);
+    public Contact(String name,String emailId,long phoneNumber){
+        
         this.name = name;
         this.emailId = emailId;
         this.phoneNumber = phoneNumber;
@@ -22,9 +22,7 @@ class Contact extends Address{
     public long getPhoneNumber(){
         return this.phoneNumber;
     }
-    public String getAddress(){
-        return super.getAddress();
-    }
+    
 
     public void setName(String name){
       this.name = name;
@@ -37,7 +35,5 @@ class Contact extends Address{
         this.phoneNumber = phoneNumber;
       } 
       
-      public void setAddress(String address){
-        super.setAddress(address);
-      }
+      
 }
