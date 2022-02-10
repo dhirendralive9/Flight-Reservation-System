@@ -14,8 +14,8 @@ class Main{
         Flight obj4 = new Flight(6233,"NK-Supreme", "North Korean Best Airline");
          obj4.flightUpdate();
 
-         RegularTicket ticket1 = new RegularTicket("departurel", "destinationl", "tdDeparture", "tdDestination", "123", "tS", 12, 5056.00, 345);
-         TouristTicket ticket2 = new TouristTicket("departurel", "destinationl", "tdDeparture", "tdDestination", "123", "tS", 12, 5056.00, 345,"Hotel one");
+         RegularTicket ticket1 = new RegularTicket(obj3, "departurel", "destinationl", "tdDeparture", "tdDestination", "fN", "tS", 299.99, 123, 6233,"NK-Supreme", "North Korean Best Airline");
+         TouristTicket ticket2 = new TouristTicket(obj3, "departurel", "destinationl", "tdDeparture", "tdDestination", "fN", "tS", 299.99, 123,"Sumpreme Hotel", 6233,"NK-Supreme", "North Korean Best Airline");
          
     }
 }

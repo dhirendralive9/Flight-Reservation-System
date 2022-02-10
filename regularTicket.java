@@ -2,9 +2,9 @@ class RegularTicket extends Ticket{
 
     private String specialServices[];
 
-   RegularTicket(String departurel, String destinationl, String tdDeparture, String tdDestination, String fN,
-            String tS, int pI, double tP, int seatNumber) {
-        super(departurel, destinationl, tdDeparture, tdDestination, fN, tS, pI, tP, seatNumber);
+   RegularTicket(Passenger passenger,String departurel, String destinationl, String tdDeparture, String tdDestination, String fN,
+            String tS, double tP, int seatNumber,int flightNumber,String airLine,String flightName) {
+        super(passenger,departurel, destinationl, tdDeparture, tdDestination, fN, tS,tP, seatNumber,flightNumber,airLine,flightName);
         //TODO Auto-generated constructor stub
     }
     

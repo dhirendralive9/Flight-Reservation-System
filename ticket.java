@@ -6,22 +6,25 @@
     private String timeDateDestination;
     private String flightName;
     private String ticketStatus;
-    private int passengerId;
+    private Passenger passenger;
     private double ticketPrice;
     private int seatNumber;
+    private Flight flight;
     
 
-    Ticket(String departurel,String destinationl,String tdDeparture,String tdDestination,String fN,String tS,int pI,double tP,int seatNumber){
+    Ticket(Passenger passenger,String departurel,String destinationl,String tdDeparture,String tdDestination,String fN,String tS,double tP,int seatNumber,int flightNumber,String airLine,String flightName){
        
+       this.passenger = passenger;
        this.departureLocation = departurel;
        this.destinationLocation = destinationl;
        this.timeDataDeparture = tdDeparture;
        this.timeDateDestination = tdDestination;
        this.flightName = fN;
        this.ticketStatus = tS;
-       this.passengerId = pI;
+       
        this.ticketPrice = tP; 
        this.seatNumber = seatNumber;
+       this.flight = new Flight(flightNumber, airLine, flightName);
     }    //This is a contructor for ticket class 
 
     public String statusCheck(){     //This wil help us to check the status of the ticket. 
@@ -89,6 +92,10 @@
 
    public void setTimeDateDeparture(String timeDateDeparture){
      this.timeDataDeparture = timeDateDeparture;
+   }
+
+   public void fetchFlightDetails(){
+      this.flight.flightUpdate();
    }
 
    }
