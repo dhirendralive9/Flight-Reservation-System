@@ -36,7 +36,7 @@
     }
 
     public String checkDuration(){    //This will return the duration of the flight.
-       return "The Duration of the Flight is 3:00 hours";
+       return "The Duration of the Flight is 3:00 hours, andmay change later";
     }
 
     public int getPNR(){
