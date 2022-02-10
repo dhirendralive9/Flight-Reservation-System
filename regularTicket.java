@@ -1,6 +1,6 @@
 class RegularTicket extends Ticket{
 
-    private String specialServices[];
+    private String specialServices[];  //private varialbe to store the special services 
 
    RegularTicket(Passenger passenger,String departurel, String destinationl, String tdDeparture, String tdDestination, String fN,
             String tS, double tP, int seatNumber,int flightNumber,String airLine,String flightName) {

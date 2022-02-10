@@ -25,6 +25,7 @@
        this.ticketPrice = tP; 
        this.seatNumber = seatNumber;
        this.flight = new Flight(flightNumber, airLine, flightName);
+       this.pnr = (int)(Math.random() * 999999);
     }    //This is a contructor for ticket class 
 
     public String statusCheck(){     //This wil help us to check the status of the ticket. 
@@ -40,7 +41,7 @@
     }
 
     public int getPNR(){
-       this.pnr = (int)(Math.random() * 999999);
+      
        return this.pnr;
     }
     public String getFlightName(){
